@@ -1,9 +1,6 @@
-import gamer
 class Game:
-    def __init__(self):
-        print("initailisation du jeu... !")
     def part_with_pc(gamer1,gamer2):
-        while  gamer1.score<3 and  gamer2.scor<3:
+        while  gamer1.score<3 and  gamer2.score<3:
             if gamer1.play()=="feuille" and gamer2.play()=="pierre":
                 gamer1.score+=1
             elif gamer1.play()=="pierre" and gamer2.play()=="ciseaux":
