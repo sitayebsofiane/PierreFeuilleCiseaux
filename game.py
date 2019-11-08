@@ -14,8 +14,8 @@ class Game:
                 gamer2.score+=1
 
         if gamer1.score==3:
-            return gamer1.name+" is wenner"
+            return gamer1.name+" is win"
         elif gamer2.scor==3:
-            return gamer2.name+" is wenner"
+            return gamer2.name+" is win"
                   
     part_with_pc=staticmethod(part_with_pc)
