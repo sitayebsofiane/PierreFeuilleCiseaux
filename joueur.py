@@ -1,16 +1,20 @@
 class Joueur:
     #constructor joueur
     def __init__(self,name,score):
-        self._name=name
-        self._score=0
-        print("creation {} avec le score {}".format(self._name,self._score))
-    
-    def _setnom(self,new_name):#setter
+        self._setname(name)
+        self.score=0
+        print("creation {} avec le score {}".format(self._name,self.score))
+    #setter
+    def _setname(self,new_name):
         import re
-        valide_expresion=r"[a-ZA-Z]{2,30}[ .-_]"
-        if not re.match(valide_expresion, new_name) :
-            self._name="Player1"
-        else:
+        valide_expresion=r"[a-z]{2,10}[A-Z]{0,10}[ .-_]?"
+        if not re.match(new_name,valide_expresion) :
             self._name=new_name
-
+        else:
+            self._name="Player1"
+    #getter
+    def _getname(self):
+        return self._name
+    #encapsulation of name gamer
+    name=property(_getname,_setname)
     
