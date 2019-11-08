@@ -15,19 +15,18 @@ class Gamer:
     #getter
     def _getname(self):
         return self._name
+    #methode of
     def play(self):
-        if(self._getname=="pc"):
-            import random
-            choice=["pierre","feuille","ciseaux"]
-            return choice[random.randint(0,2)]
-        else:
             while 1:
                 respense=input("veillez entrez pierre,feuille ou ciseaux")
                 if respense.lower() in ["pierre","feuille","ciseaux"]:
                     return respense
-
-
-
     #encapsulation of name gamer
     name=property(_getname,_setname)
     
+class Pc(Gamer):
+    def play(self):
+        import random
+        choice=["pierre","feuille","ciseaux"]
+        return choice[random.randint(0,2)]
+
