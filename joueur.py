@@ -1,4 +1,4 @@
-class Joueur:
+class Gamer:
     #constructor joueur
     def __init__(self,name,score):
         self._setname(name)
