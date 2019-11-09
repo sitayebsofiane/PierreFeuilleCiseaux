@@ -6,24 +6,31 @@ class Gamer:
     #setter
     def _setname(self,new_name):
         import re
-        valide_expresion=r"[a-z]{2,10}[A-Z]{0,10}[ .-_]?"
-        if not re.match(new_name,valide_expresion) :
-            self._name=new_name
-        else:
+        # i check his name should be alphabitique min=2 and max=10 else i will take name Player1
+        if  re.search(r"^[A-Za-z\-._]{2,10}$",new_name) is None :
             self._name="Player1"
+        else:
+            self._name=new_name
     #getter
     def _getname(self):
         return self._name
     #methode of
     def play(self):
-            while 1:
-                respense=input("veillez entrez pierre,feuille ou ciseaux :")
-                if respense.lower() in ["pierre","feuille","ciseaux"]:
-                    print(self._getname()+" chose "+respense+" wize score "+str(self.score))
-                    return respense
+        import re
+        while 1:
+            respense=input("veillez entrez pierre,feuille ou ciseaux :").lower()
+            if re.search(r"^p[ierre]", respense) :
+                print(self._getname()+" chose pierre wize score {} ".format(str(self.score)))
+                return respense
+            elif  re.search(r"^f[euille]", respense):
+                print(self._getname()+" chose feuille wize score {}".format(str(self.score)))
+                return respense
+            elif  re.search(r"^c[iseaux]", respense):
+                print(self._getname()+" chose ciseaux wize score {}".format(str(self.score)))
+                return respense
     #encapsulation of name gamer
     name=property(_getname,_setname)
-    
+#class  Pc extends Gammer
 class Pc(Gamer):
     def __init__(self):
         Gamer.__init__(self,"computer")
