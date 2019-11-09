@@ -7,4 +7,4 @@ while input("do you want to play Y or N: ").lower()!="n":
     pc= Pc()
     print("welcome "+gamer.name+" you are palying wize "+pc.name)
     game=Game()
-    print(game.part_with_pc(gamer,pc))
+    print(game.part(gamer,pc))
