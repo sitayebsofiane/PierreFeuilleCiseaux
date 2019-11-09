@@ -14,7 +14,7 @@ class Gamer:
     #getter
     def _getname(self):
         return self._name
-    #methode of
+    #methode of humain gamer
     def play(self):
         import re
         while 1:
@@ -34,6 +34,7 @@ class Gamer:
 class Pc(Gamer):
     def __init__(self):
         Gamer.__init__(self,"computer")
+    #method of computer gamer
     def play(self):
         import random
         choices=["pierre","feuille","ciseaux"]
