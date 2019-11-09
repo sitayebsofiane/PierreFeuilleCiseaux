@@ -1,5 +1,5 @@
 class Game:
-    def part_with_pc(self,gamer1,gamer2):
+    def part(self,gamer1,gamer2):
         while gamer1.score<3 and gamer2.score<3:
             res_gamer1=gamer1.play()
             res_gamer2=gamer2.play()   
