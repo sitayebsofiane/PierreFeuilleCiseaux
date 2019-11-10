@@ -21,13 +21,13 @@ class Gamer:
             respense=input("veillez entrez pierre,feuille ou ciseaux :").lower()
             if re.search(r"^p[ierre]", respense) :
                 print(self._getname()+" chose pierre wize score {} ".format(str(self.score)))
-                return respense
+                return "pierre"
             elif  re.search(r"^f[euille]", respense):
                 print(self._getname()+" chose feuille wize score {}".format(str(self.score)))
-                return respense
+                return "feuille"
             elif  re.search(r"^c[iseaux]", respense):
                 print(self._getname()+" chose ciseaux wize score {}".format(str(self.score)))
-                return respense
+                return "ciseaux"
     #encapsulation of name gamer
     name=property(_getname,_setname)
 #class  Pc extends Gammer

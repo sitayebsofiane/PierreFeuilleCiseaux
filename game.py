@@ -3,9 +3,9 @@ class Game:
         while gamer1.score<3 and gamer2.score<3:
             res_gamer1=gamer1.play()
             res_gamer2=gamer2.play()   
-            if res_gamer1=="feuille" and res_gamer2=="pierre":
+            if res_gamer1=="ciseaux" and res_gamer2=="feuille":
                     gamer1.score+=1
-            elif res_gamer1=="pierre" and res_gamer2=="ciseaux":
+            elif res_gamer1=="feuille" and res_gamer2=="pierre":
                     gamer1.score+=1
             elif  res_gamer1=="pierre" and res_gamer2=="ciseaux":
                     gamer1.score+=1              
