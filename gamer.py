@@ -20,13 +20,13 @@ class Gamer:
         while 1:
             respense=input("veillez entrez pierre,feuille ou ciseaux :").lower()
             if re.search(r"^p[ierre]", respense) :
-                print(self._getname()+" chose pierre wize score {} ".format(str(self.score)))
+                print(self._getname()+" a chosie pierre avec score {} ".format(str(self.score)))
                 return "pierre"
             elif  re.search(r"^f[euille]", respense):
-                print(self._getname()+" chose feuille wize score {}".format(str(self.score)))
+                print(self._getname()+" a chosie feuille avec score {}".format(str(self.score)))
                 return "feuille"
             elif  re.search(r"^c[iseaux]", respense):
-                print(self._getname()+" chose ciseaux wize score {}".format(str(self.score)))
+                print(self._getname()+" a chosie ciseaux avec score {}".format(str(self.score)))
                 return "ciseaux"
     #encapsulation of name gamer
     name=property(_getname,_setname)
@@ -39,6 +39,6 @@ class Pc(Gamer):
         import random
         choices=["pierre","feuille","ciseaux"]
         choice=choices[random.randint(0,2)]
-        print(self._getname()+" chose "+choice+" wize score "+str(self.score))
+        print(self._getname()+" a choisie "+choice+" avec un  score "+str(self.score))
         return choice
 
